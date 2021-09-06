@@ -57,7 +57,7 @@ class RefPointer(JsonPointer):
         if has_remote:
             return remote
         for idx, part in enumerate(self.parts):
-            if not part:
+            if len(self.parts) == 1 and not part:
                 continue
             try:
                 try:
